@@ -1,0 +1,270 @@
+The template file must have an Xml extension and an main tag called folder
+all names are facultative
+Un fichier peut contenir plusieurs scenes qui peuvent elles-meme contenir
+plusieurs objects, lumieres et cameras
+
+
+Un fichier modele doit etre sous la forme:
+
+Nom_du_fichier.xml
+
+
+ Balises de scenes
+ --> 1 seul nom de balise possible : 'scene' <--
+    |
+    | Balises d'object, lights, cameras
+    | --> Balises d'objects possibles : 'plan', 'sphere', 'cylindre', 'cone', 'disque'    <--
+    | --> Balises de lumieres possibles : 'ambient', 'spot', 'soleil'                     <--
+    | --> 1 seul nom de balise de camera : 'camera'                                       <--
+    |   |
+    |   | Balises de parametres -> toutes les nombres prennent des guillemets 8 -> "8"
+    |   | --> Parametres d'objects :
+    |   | -->    BALISE      |  PARAMETRE   |        VALEUR         |       OBLIGATOIRE POUR        <--
+    |   | --> ------------------------------------------------------------------------------------- <--
+    |   | -->    'ray'       |   'value='   |      float positif    |    'sphere', 'cylindre',      <--
+    |   | -->                |              |                       |  'cone', 'disque', 'spot'     <--
+    |   | --> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <--
+    |   | --> 'transparency' |   'value='   |   float entre 0 & 1   | 'plan', 'sphere', 'cylindre'  <--
+    |   | -->                |              |                       |       'cone', 'disque'        <--
+    |   | --> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <--
+    |   | -->  'shininess'   |   'value='   | float entre 1 & 1000  | 'plan', 'sphere', 'cylindre'  <--
+    |   | -->                |              |                       |    'cone', 'disque'           <--
+    |   | --> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <--
+    |   | -->'color_specular'|'r=' 'g=' 'b='| 3 floats entre 0 & 1  | 'plan', 'sphere', 'cylindre'  <--
+    |   | -->                |              |                       |    'cone', 'disque'           <--
+    |   | --> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <--
+    |   | -->   'color'      |'r=' 'g=' 'b='| 3 floats entre 0 & 1  | 'plan', 'sphere', 'cylindre'  <--
+    |   | -->                |              |                       |    'cone', 'disque'           <--
+    |   | --> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <--
+    |   | --> 'color_ambient'|'r=' 'g=' 'b='| 3 floats entre 0 & 1  | 'plan', 'sphere', 'cylindre'  <--
+    |   | -->                |              |                       |    'cone', 'disque'           <--
+    |   | --> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <--
+    |   | -->     'pos'      |'x=' 'y=' 'z='|        3 floats       | 'plan', 'sphere', 'cylindre'  <--
+    |   | -->                |              |                       |    'cone', 'disque'           <--
+    |   | --> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <--
+    |   | -->  'limit_min'   |'x=' 'y=' 'z='|     3 floats          | 'plan', 'sphere', 'cylindre'  <--
+    |   | -->                |              |                       |    'cone', 'disque'           <--
+    |   | --> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <--
+    |   | -->  'limit_max'   |'x=' 'y=' 'z='|     3 floats          | 'plan', 'sphere', 'cylindre'  <--
+    |   | -->                |              |                       |    'cone', 'disque'           <--
+    |   | --> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <--
+    |   | -->    'rotate'    |'x=' 'y=' 'z='|     3 floats          | 'plan', 'sphere', 'cylindre'  <--
+    |   | -->                |              |                       |    'cone', 'disque'           <--
+    |   | --> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <--
+    |   | -->    'texture'   |   'color='   |   Valid path to an    | 'plan', 'sphere', 'cylindre'  <--
+    |   | -->                |   'pertu'    |       Bmp texture     |    'cone', 'disque'           <--
+    |   | --> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <--
+    |   | -->    'alpha'     |   'value='   |  float entre 0 & Pi   |           'cone'              <--
+    |   | -->                |              |                       |                               <--
+    |   | --> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <--
+    |   | -->     'fov'      |   'value='   |  float entre 0 & Pi/2 |           'camera'            <--
+    |   | -->                |              |                       |                               <--
+    |   | --> ------------------------------------------------------------------------------------- <--
+    |   |   |
+    |   |   |
+    |   |   |
+
+<folder name="Nom_du_fichier">
+    <scene name="Nom_de_premiere_scene">
+        <sphere name="Nom_de_la_sphere">
+            <ray value="3" />
+            <transparency value="0" />
+            <shininess value="10" />
+            <color_specular r="0" g="0" b="0" />
+            <color r="0.5" g="0" b="0" />
+            <color_ambient r="0.5" g="0" b="0" />
+            <pos x="10" y="5" z="0" />
+            <limit_min  />
+            <limit_max />
+            <rotate x="0.3" y="0" z="0.5" />
+            <texture color="textures/earth.bmp" pertu="fewfw"/>
+        </sphere>
+        <plan name="Nom_du_plan">
+            <transparency value="0" />
+            <shininess value="1" />
+            <color_specular r="0" g="0" b="0" />
+            <color r="0" g="0" b="0.5" />
+            <color_ambient r="0" g="0" b="0.5" />
+            <pos x="0" y="0" z="-10" />
+            <limit_min x="0" y="0" z="0" />
+            <limit_max x="0" y="0" z="0" />
+            <rotate x="0" y="0" z="0" />
+            <texture color="" />
+        </plan>
+        <disque name="Nom_du_disque">
+            <ray value="100" />
+            <transparency value="0" />
+            <shininess value="10" />
+            <color_specular r="0" g="0" b="0" />
+            <color r="0.368000" g="0.159999" b="0.195999" />
+            <color_ambient r="0.368000" g="0.159999" b="0.195999" />
+            <pos x="100" y="0" z="5" />
+            <limit_min x="0" y="0" z="0" />
+            <limit_max x="0" y="0" z="0" />
+            <rotate x="0" y="0" z="0" />
+            <texture/>
+        </disque>
+        <cone type="CONE" name="Cornetto Enigma">
+            <ray value="0.298446" />
+            <alpha value="-1.4" />
+            <transparency value="0" />
+            <shininess value="10" />
+            <color_specular r="0" g="0" b="0" />
+            <color r="0" g="1" b="0" />
+            <color_ambient r="0" g="0" b="0.5" />
+            <pos x="10" y="-5" z="0" />
+            <limit_min/>
+            <limit_max />
+            <rotate x="0" y="0" z="0" />
+            <texture/>
+        </cone>
+        <cylindre name="Nom_du_cylindre">
+            <ray value="2" />
+            <transparency value="0" />
+            <shininess value="11" />
+            <color_specular r="0" g="0" b="0" />
+            <color r="0.5" g="0.5" b="0" />
+            <color_ambient r="0.5" g="0.5" b="0" />
+            <pos x="10" y="0" z="0" />
+            <limit_min x="0" y="0" z="0" />
+            <limit_max x="0" y="0" z="0" />
+            <rotate x="1.570000" y="0" z="0" />
+            <texture/>
+        </cylindre>
+        <ambient name="Nom_de_la_lumiere_ambiante">
+            <intensity value="0.1" />
+            <color r="1" g="1" b="1" />
+        </ambient>
+        <spot name="Nom_du_spot">
+            <intensity value="0.8" />
+            <ray value="0." />
+            <alpha value="0" />
+            <pos x="-5" y="0" z="0" />
+            <color r="1" g="1" b="1" />
+        </spot>
+        <soleil name="Nom_du_soleil">
+            <intensity value="0.8" />
+            <ray value="0." />
+            <alpha value="0" />
+            <dir x="0" y="0" z="0" />
+            <color r="1" g="1" b="1" />
+        </soleil>
+        <camera name="Nom_de_la_1ere_camera">
+            <fov value="1.570796" />
+            <origin x="-10" y="0" z="0" />
+            <rotate x="0" y="0" z="0.1" />
+        </camera>
+        <camera name="Nom_de_la_2eme_camera">
+            <fov value="1.570796" />
+            <origin x="-10" y="0" z="0" />
+            <rotate x="0.3" y="0" z="0" />
+        </camera>
+        <camera name="Nom_de_la_3eme_camera">
+            <fov value="1.570796" />
+            <origin x="-10" y="0" z="0" />
+            <rotate x="0.6" y="0" z="0" />
+        </camera>
+    </scene>
+    <scene name="Nom_de_deuxieme_scene">
+        <sphere name="Nom_de_la_sphere">
+            <ray value="3" />
+            <transparency value="0" />
+            <shininess value="10" />
+            <color_specular r="0" g="0" b="0" />
+            <color r="0.5" g="0" b="0" />
+            <color_ambient r="0.5" g="0" b="0" />
+            <pos x="10" y="5" z="0" />
+            <limit_min  />
+            <limit_max />
+            <rotate x="0.3" y="0" z="0.5" />
+            <texture color="textures/earth.bmp" pertu="fewfw"/>
+        </sphere>
+        <plan name="Nom_du_plan">
+            <transparency value="0" />
+            <shininess value="1" />
+            <color_specular r="0" g="0" b="0" />
+            <color r="0" g="0" b="0.5" />
+            <color_ambient r="0" g="0" b="0.5" />
+            <pos x="0" y="0" z="-10" />
+            <limit_min x="0" y="0" z="0" />
+            <limit_max x="0" y="0" z="0" />
+            <rotate x="0" y="0" z="0" />
+            <texture color="" />
+        </plan>
+        <disque name="Nom_du_disque">
+            <ray value="100" />
+            <transparency value="0" />
+            <shininess value="10" />
+            <color_specular r="0" g="0" b="0" />
+            <color r="0.368000" g="0.159999" b="0.195999" />
+            <color_ambient r="0.368000" g="0.159999" b="0.195999" />
+            <pos x="100" y="0" z="5" />
+            <limit_min x="0" y="0" z="0" />
+            <limit_max x="0" y="0" z="0" />
+            <rotate x="0" y="0" z="0" />
+            <texture/>
+        </disque>
+        <cone type="CONE" name="Cornetto Enigma">
+            <ray value="0.298446" />
+            <alpha value="-1.4" />
+            <transparency value="0" />
+            <shininess value="10" />
+            <color_specular r="0" g="0" b="0" />
+            <color r="0" g="1" b="0" />
+            <color_ambient r="0" g="0" b="0.5" />
+            <pos x="10" y="-5" z="0" />
+            <limit_min/>
+            <limit_max />
+            <rotate x="0" y="0" z="0" />
+            <texture/>
+        </cone>
+        <cylindre name="Nom_du_cylindre">
+            <ray value="2" />
+            <transparency value="0" />
+            <shininess value="11" />
+            <color_specular r="0" g="0" b="0" />
+            <color r="0.5" g="0.5" b="0" />
+            <color_ambient r="0.5" g="0.5" b="0" />
+            <pos x="10" y="0" z="0" />
+            <limit_min x="0" y="0" z="0" />
+            <limit_max x="0" y="0" z="0" />
+            <rotate x="1.570000" y="0" z="0" />
+            <texture/>
+        </cylindre>
+        <ambient name="Nom_de_la_lumiere_ambiante">
+            <intensity value="0.1" />
+            <color r="1" g="1" b="1" />
+        </ambient>
+        <spot name="Nom_du_spot">
+            <intensity value="0.8" />
+            <ray value="0." />
+            <alpha value="0" />
+            <pos x="-5" y="0" z="0" />
+            <color r="1" g="1" b="1" />
+        </spot>
+        <soleil name="Nom_du_soleil">
+            <intensity value="0.8" />
+            <ray value="0." />
+            <alpha value="0" />
+            <dir x="0" y="0" z="0" />
+            <color r="1" g="1" b="1" />
+        </soleil>
+        <camera name="Nom_de_la_1ere_camera">
+            <fov value="1.570796" />
+            <origin x="-10" y="0" z="0" />
+            <rotate x="0" y="0" z="0.1" />
+        </camera>
+        <camera name="Nom_de_la_2eme_camera">
+            <fov value="1.570796" />
+            <origin x="-10" y="0" z="0" />
+            <rotate x="0.3" y="0" z="0" />
+        </camera>
+        <camera name="Nom_de_la_3eme_camera">
+            <fov value="1.570796" />
+            <origin x="-10" y="0" z="0" />
+            <rotate x="0.6" y="0" z="0" />
+        </camera>
+    </scene>
+
+
+</folder>
