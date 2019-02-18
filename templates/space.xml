@@ -1,0 +1,347 @@
+﻿<folder name="Figure V.4">
+	<scene name="Solar System">
+		<sphere name="Sun" >
+			<ray value="2.0" />
+			<transparency value="0" />
+			<shininess value="70" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<color r="0.8" g="0" b="0" />
+			<color_ambient r="0.8" g="0" b="0" />
+			<pos x="0" y="-4.0" z="0" />
+			<limit_min	/>
+			<limit_max  />
+			<rotate x="0" y="0" z="0" />
+			<texture color="./textures/space/2k_sun.bmp"/>
+			<checker_A r="1" g="0" b="0"/>
+			<checker_B r="0" g="1" b="0"/>
+			<checker_width value="12"/>
+			<checker_length value="12"/>
+			<noise_A r="1" g="0" b="0"/>
+			<noise_B r="0" g="1" b="0"/>
+			<noise_octaves value="3"/>
+			<noise_persistence value="0.3"/>
+		</sphere>
+    <sphere name="Mercury" >
+			<ray value="0.1" />
+			<transparency value="0" />
+			<shininess value="70" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<color r="0.8" g="0" b="0" />
+			<color_ambient r="0.8" g="0" b="0" />
+			<pos x="0" y="-1.7" z="0" />
+			<limit_min	/>
+			<limit_max  />
+			<rotate x="0" y="0" z="0" />
+			<texture color="./textures/space/2k_mercury.bmp"/>
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</sphere>
+    <sphere name="Venus" >
+			<ray value="0.25" />
+			<transparency value="0" />
+			<shininess value="70" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<color r="0.8" g="0" b="0" />
+			<color_ambient r="0.8" g="0" b="0" />
+			<pos x="0" y="-1.4" z="0" />
+			<limit_min	/>
+			<limit_max  />
+			<rotate x="0" y="0" z="0" />
+			<texture color="./textures/space/2k_venus.bmp"/>
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</sphere>
+    <sphere name="Earth" >
+			<ray value="0.22" />
+			<transparency value="0" />
+			<shininess value="70" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<color r="0.8" g="0" b="0" />
+			<color_ambient r="0.8" g="0" b="0" />
+			<pos x="0" y="-0.9" z="0" />
+			<limit_min	/>
+			<limit_max  />
+			<rotate x="0" y="0" z="0" />
+			<texture color="./textures/space/2k_earth.bmp"/>
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</sphere>
+    <sphere name="Mars" >
+			<ray value="0.2" />
+			<transparency value="0" />
+			<shininess value="70" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<color r="0.8" g="0" b="0" />
+			<color_ambient r="0.8" g="0" b="0" />
+			<pos x="0" y="-0.4" z="0" />
+			<limit_min	/>
+			<limit_max  />
+			<rotate x="0" y="0" z="0" />
+			<texture color="./textures/space/2k_mars.bmp"/>
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</sphere>
+    <sphere name="Jupiter" >
+			<ray value="0.6" />
+			<transparency value="0" />
+			<shininess value="70" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<color r="0.8" g="0" b="0" />
+			<color_ambient r="0.8" g="0" b="0" />
+			<pos x="0" y="0.3" z="0" />
+			<limit_min	/>
+			<limit_max  />
+			<rotate x="0" y="0" z="0" />
+			<texture color="./textures/space/2k_jupiter.bmp"/>
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</sphere>
+    <sphere name="Saturne" >
+			<ray value="0.47" />
+			<transparency value="0" />
+			<shininess value="70" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<color r="0.8" g="0" b="0" />
+			<color_ambient r="0.8" g="0" b="0" />
+			<pos x="0" y="1.2" z="0" />
+			<limit_min	/>
+			<limit_max  />
+			<rotate x="0" y="0" z="0" />
+			<texture color="./textures/space/2k_saturn.bmp"/>
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</sphere>
+    <sphere name="Uranus" >
+			<ray value="0.3" />
+			<transparency value="0" />
+			<shininess value="70" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<color r="0.8" g="0" b="0" />
+			<color_ambient r="0.8" g="0" b="0" />
+			<pos x="0" y="2.0" z="0" />
+			<limit_min	/>
+			<limit_max  />
+			<rotate x="0" y="0" z="0" />
+			<texture color="./textures/space/2k_uranus.bmp"/>
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</sphere>
+    <sphere name="Neptune" >
+			<ray value="0.25" />
+			<transparency value="0" />
+			<shininess value="70" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<color r="0.8" g="0" b="0" />
+			<color_ambient r="0.8" g="0" b="0" />
+			<pos x="0" y="2.8" z="0" />
+			<limit_min	/>
+			<limit_max  />
+			<rotate x="0" y="0" z="0" />
+			<texture color="./textures/space/2k_neptune.bmp"/>
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</sphere>
+		<plan name="Plan bottom">
+			<transparency value="0" />
+			<shininess value="1" />
+			<color_ambient r="0.3" g="0.3" b="0.3" />
+			<color r="0.3" g="0.3" b="0.3" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<pos x="0" y="0" z="-4" />
+			<limit_min x="0" y="0" z="0" />
+			<limit_max x="0" y="0" z="0" />
+			<rotate x="0" y="0" z="0" />
+			<texture color="./textures/space/2k_stars_milky_way.bmp" />
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</plan>
+    <plan name="Plan top">
+			<transparency value="0" />
+			<shininess value="1" />
+			<color_ambient r="0.3" g="0.3" b="0.3" />
+			<color r="0.3" g="0.3" b="0.3" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<pos x="0" y="0" z="6" />
+			<limit_min x="0" y="0" z="0" />
+			<limit_max x="0" y="0" z="0" />
+			<rotate x="0" y="0" z="0" />
+			<texture color="./textures/space/2k_stars_milky_way.bmp" />
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</plan>
+		<plan name="Plan side 1">
+			<transparency value="0" />
+			<shininess value="1" />
+			<color_ambient r="0.3" g="0.3" b="0.3" />
+			<color r="0.3" g="0.3" b="0.3" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<pos x="0" y="-7" z="0" />
+			<limit_min x="0" y="0" z="0" />
+			<limit_max x="0" y="0" z="0" />
+			<rotate x="1.57" y="0" z="0" />
+			<texture color="./textures/space/2k_stars.bmp" />
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</plan>
+		<plan name="Plan side 2">
+			<transparency value="0" />
+			<shininess value="1" />
+			<color_ambient r="0.3" g="0.3" b="0.3" />
+			<color r="0.3" g="0.3" b="0.3" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<pos x="0" y="5" z="0" />
+			<limit_min x="0" y="0" z="0" />
+			<limit_max x="0" y="0" z="0" />
+			<rotate x="1.57" y="0" z="0" />
+			<texture color="./textures/space/2k_stars.bmp" />
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</plan>
+		<plan name="Plan side 3">
+			<transparency value="0" />
+			<shininess value="1" />
+			<color_ambient r="0.3" g="0.3" b="0.3" />
+			<color r="0.3" g="0.3" b="0.3" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<pos x="-5" y="0" z="0" />
+			<limit_min x="0" y="0" z="0" />
+			<limit_max x="0" y="0" z="0" />
+			<rotate x="0" y="1.57" z="0" />
+			<texture color="./textures/space/2k_stars.bmp" />
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</plan>
+    <plan name="Plan side 4">
+			<transparency value="0" />
+			<shininess value="1" />
+			<color_ambient r="0.3" g="0.3" b="0.3" />
+			<color r="0.3" g="0.3" b="0.3" />
+			<color_specular r="0.1" g="0.1" b="0.1" />
+			<pos x="5" y="0" z="0" />
+			<limit_min x="0" y="0" z="0" />
+			<limit_max x="0" y="0" z="0" />
+			<rotate x="0" y="1.57" z="0" />
+			<texture color="./textures/space/2k_stars.bmp" />
+			<checker_A />
+			<checker_B />
+			<checker_width />
+			<checker_length />
+			<noise_A />
+			<noise_B />
+			<noise_octaves />
+			<noise_persistence />
+		</plan>
+		<ambient name="Ambient">
+			<intensity value="0.1" />
+			<alpha value="0" />
+			<pos x="0" y="0" z="-2" />
+			<dir x="0" y="0" z="0" /> -->
+			<color r="1" g="1" b="1" />
+			<luminance x="0.9" y="0.9" z="0.9" />
+		</ambient>
+		<spot name="Spot">
+			<intensity value="0.8" />
+			<ray value="0.1" />
+			<alpha value="0" />
+			<pos x="0" y="0" z="3.5" />
+			<color r="1" g="1" b="1" />
+		</spot>
+    <spot name="Spot">
+			<intensity value="0.8" />
+			<ray value="0.1" />
+			<alpha value="0" />
+			<pos x="0" y="0" z="-3.5" />
+			<color r="1" g="1" b="1" />
+		</spot>
+		<camera>
+			<alpha value="0.157079" />
+			<fov value="1.570796" />
+			<axis_x x="1" y="0" z="0" />
+			<axis_y x="0" y="1" z="0" />
+			<axis_z x="0" y="0" z="1" /> -->
+			<origin x="-4" y="0" z="0" />
+			<rotate w="0" x="0" y="0" z="0" />
+			<rotate x="0" y="0" z="0" />
+			<scale value="0.1"/>
+			<focale value="15"/>
+		</camera>
+	</scene>
+</folder>
